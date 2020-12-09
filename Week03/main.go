@@ -32,7 +32,7 @@ func main() {
 		case <- sign:
 			fmt.Println("监听到信号；开始退出...")
 			_ = server.Shutdown(context.Background())
-			return errors.New("监听到信号-结束")
+			return errors.New("信号-结束")
 		case <-ctx.Done():
 			return nil
 		}
