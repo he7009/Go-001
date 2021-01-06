@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	 er "errors"
 	"github.com/pkg/errors"
 )
 
@@ -17,6 +18,10 @@ func main() {
 func Service() error {
 	err := Dao()
 	return  errors.Wrap(err,"数据为空")
+
+	fmt.Errorf()
+
+	er.Unwrap()
 }
 
 func Dao() error {
